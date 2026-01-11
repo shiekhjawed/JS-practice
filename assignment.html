@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment</title>
+</head>
+<body>
+    <script>
+        // 1. Print numbers from 1 to 10 using a for loop:
+        for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+// 2. Create an array of 5 fruits and display each fruit using a for loop:
+let fruits = ['grapes', 'cherry', 'lichey', 'strawberry', 'rusberry'];
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+// 3. Check whether a given number is even or odd using if-else
+let Num = 5;
+if (Num % 4 === 0) {
+  console.log(Num + ' is even');
+} else {
+  console.log(Num + ' is odd');
+}
+// 4. Array of 10 student marks and print each mark with its grade:
+let marks = [86, 73, 91, 44, 66, 55, 30, 88, 77, 40];
+for (let i = 0; i < marks.length; i++) {
+  let grade;
+  if (marks[i] >= 80) grade = 'A';
+  else if (marks[i] >= 60) grade = 'B';
+  else if (marks[i] >= 50) grade = 'C';
+  else grade = 'Fail';
+  console.log('Mark: ' + marks[i] + ', Grade: ' + grade);
+}
+// 5. Find the largest number in an array:
+let numbers = [10, 20, 2, 5, 15];
+let largest = numbers[0];
+for (let i = 1; i < numbers.length; i++) {
+  if (numbers[i] > largest) {
+    largest = numbers[i];
+  }
+}
+console.log('Largest number is ' + largest);
+// 6. Calculate the sum of all numbers in an array using a loop:
+let nums = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let i = 0; i < nums.length; i++) {
+  sum += nums[i];
+}
+console.log('Sum is ' + sum);
+// 7. Print the multiplication table of 5 using a for loop:
+for (let i = 1; i <= 10; i++) {
+  console.log('5 x ' + i + ' = ' + (5 * i));
+}
+//   8. Reverse an array without using built-in methods:
+let num = [1, 2, 3, 4, 5];
+let reversed = [];
+for (let i = num.length - 1; i >= 0; i--) {
+  reversed.push(num[i]);
+}
+console.log(reversed);
+// 9. Check whether a number is positive, negative, or zero using if-else
+let checkNum = -3;
+if (checkNum > 0) {
+    console.log(checkNum + ' is positive');
+} else if (checkNum < 0) {
+    console.log(checkNum + ' is negative');
+} else {
+    console.log(checkNum + ' is zero');
+}
+
+// 10. Count how many even and odd numbers are in an array:
+let Number = [1, 2, 3, 4, 5, 6,7,8,9,10];
+let evenCount = 0;
+let oddCount = 0;
+for (let i = 0; i < Number.length; i++) {
+  if (Number[i] % 2 === 0) {
+    evenCount++;
+  } else {
+    oddCount++;
+  }
+}
+console.log('Even numbers: ' + evenCount);
+console.log('Odd numbers: ' + oddCount);
+// 11. Print only names with more than 5 characters:
+let names = ['Salaar', 'ziyan', 'AbuBAKR', 'Ashar', 'zunaisha'];
+for (let i = 0; i < names.length; i++) {
+  if (names[i].length > 5) {
+    console.log(names[i]);
+  }
+}
+// 12. Print the factorial of a given number using a loop
+// n! = n × (n-1) × (n-2) × ... × 2 × 1 factorial formula
+
+let n = 3;
+let factorial = 1;
+for (let i = 1; i <= n; i++) {
+  factorial *= i;
+}
+console.log('Factorial of ' + n + ' is ' + factorial);
+// 13. Find the smallest number in an array
+let nambers = [10, 5, 8, 4, 15];
+let smallest =nambers[0];
+for (let i = 1; i < nambers.length; i++) {
+  if (nambers[i] < smallest) {
+    smallest = nambers[i];
+
+}
+}
+console.log(smallest);
+
+
+// // 14. Print numbers 1 to 100 with FizzBuzz rules:
+
+
+for (let i = 1; i <= 100; i++) {
+  console.log(
+    (i % 3 === 0 ? "Fizz" : "") + 
+    (i % 5 === 0 ? "Buzz" : "") || i
+  );
+}
+
+// 15. Check whether a string is a palindrome:
+let str = "refer";
+let reverse = "";
+
+for (let i = str.length - 1; i >= 0; i--) {
+  reversed += str[i];
+}
+
+if (str === reverse) {
+  console.log("Palindrome");
+} else {
+  console.log("Not Palindrome");
+}
+
+
+
+// 16. Print numbers greater than 50 from an array:
+
+
+let digit = [10, 60, 45, 80, 390];
+
+for (let i = 0; i < digit.length; i++) {
+  if (digit[i] > 50) {
+    console.log(digit[i]);
+  }
+}
+
+// 17. Swap the first and last element of an array:
+let Numbers = [1, 2, 3, 4, 5]; 
+[numbers[0], numbers[numbers.length - 1]] = [numbers[numbers.length - 1], numbers[0]];
+console.log(numbers); // [5, 2, 3, 4, 1] swap replace first element into last
+
+
+
+// 18. Calculate the average of numbers in an array:
+
+let count = [22, 20, 90, 40, 50];
+let total = 0;
+
+for (let i = 0; i < count.length; i++) {
+  total += count[i];
+}
+
+let average = total / numbers.length;
+console.log("Average: " + average);
+
+// // 19. Find how many times a specific number appears in an array:
+let number = [1, 4, 3, 4, 6, 24,];
+let target = 4;
+let cont = 0;
+
+for (let i = 0; i < number.length; i++) {
+  if (numbers[i] === target) {
+    cont++;
+  }
+}
+
+console.log(target + " appears " + count + " times");
+
+// 20. Print sum of even and odd numbers separately from an array
+
+let assending = [10,20,30,40,50,60,70,80,90,100];
+let sumEven = 0;
+let sumOdd = 0;
+
+for (let i = 0; i < assending.length; i++) {
+  if (assending[i] % 2 === 0) {
+    sumEven += assending[i]; // even number add
+  } else {
+    sumOdd += assending[i]; // odd number add
+  }
+}
+
+console.log("Sum of Even Numbers: " + sumEven);
+console.log("Sum of Odd Numbers: " + sumOdd);
+
+     console.log(sum)
+
+
+
+    </script>
+    
+</body>
+</html>
+

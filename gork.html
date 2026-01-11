@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Classes and Objects Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f0f0f0;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      max-width: 600px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Classes and Objects Demo</h1>
+  <button onclick="runDemo()">Run Demo</button>
+  <div id="output">Click the button to see the results!</div>
+
+  <script>
+    // Class: Car
+    class Car {
+      constructor(brand, model) {
+        this.brand = brand;
+        this.model = model;
+        this.speed = 0;
+      }
+
+      accelerate(amount) {
+        this.speed += amount;
+        return `${this.brand} ${this.model} is now at ${this.speed} km/h`;
+      }
+
+      brake() {
+        this.speed = 0;
+        return `${this.brand} ${this.model} has stopped`;
+      }
+
+      static maxSpeed = 200; // Static property
+      static getMaxSpeed() {
+        return `Max speed is ${Car.maxSpeed} km/h`;
+      }
+    }
+
+    // Class: ElectricCar (inherits from Car)
+    class ElectricCar extends Car {
+      constructor(brand, model, batteryCapacity) {
+        super(brand, model);
+        this.batteryCapacity = batteryCapacity;
+      }
+
+      charge() {
+        return `${this.brand} ${this.model} is charging its ${this.batteryCapacity} kWh battery`;
+      }
+    }
+
+    // Class: PrivateExample (demonstrating private fields)
+    class PrivateExample {
+      #privateField = "secret"; // Private field
+      getSecret() {
+        return this.#privateField;
+      }
+    }
+
+    // Object Literal: Person
+    const person = {
+      name: "Alice",
+      age: 25,
+      greet() {
+        return `Hi, I'm ${this.name}!`;
+      }
+    };
+
+    // Function to run the demo and display results
+    function runDemo() {
+      let output = "";
+
+      // Car class example
+      const myCar = new Car("Toyota", "Camry");
+      output += `<p><strong>Car Example:</strong></p>`;
+      output += `<p>Brand: ${myCar.brand}</p>`;
+      output += `<p>${myCar.accelerate(50)}</p>`;
+      output += `<p>${myCar.brake()}</p>`;
+      output += `<p>${Car.getMaxSpeed()}</p>`;
+
+      // ElectricCar class example
+      const tesla = new ElectricCar("Tesla", "Model 3", 75);
+      output += `<p><strong>ElectricCar Example:</strong></p>`;
+      output += `<p>${tesla.accelerate(60)}</p>`;
+      output += `<p>${tesla.charge()}</p>`;
+
+      // PrivateExample class example
+      const obj = new PrivateExample();
+      output += `<p><strong>PrivateExample:</strong></p>`;
+      output += `<p>Secret: ${obj.getSecret()}</p>`;
+
+      // Object Literal example
+      output += `<p><strong>Object Literal (Person):</strong></p>`;
+      output += `<p>Name: ${person.name}</p>`;
+      output += `<p>${person.greet()}</p>`;
+
+      // Display results in the HTML
+      document.getElementById("output").innerHTML = output;
+    }
+  </script>
+</body>
+</html>

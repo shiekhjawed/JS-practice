@@ -1,0 +1,771 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <meta property="og:title" content="My Awesome Website">
+<meta property="og:description" content="Explore my latest projects and tutorials.">
+<meta property="og:image" content="https://yourwebsite.com/images/preview.jpg">
+<meta property="og:url" content="https://yourwebsite.com">
+<meta name="twitter:card" content="summary_large_image">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OJ Collection</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+/* header about information */
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: grey;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #fff;
+    }
+    
+
+
+      
+    
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  
+    }
+
+    nav li {
+      margin-left: auto;
+      transition: background 0.3s;
+    }
+
+    nav li:hover {
+      background-color: rgba(0, 0, 255, 0.1);
+      border-radius: 10px;
+    }
+
+    nav a {
+      font-family: 'Dancing Script', cursive;
+      text-decoration: none;
+      text-transform: capitalize;
+      color: black;
+      font-size: 1.1rem;
+      padding: 5px 10px;
+      display: inline-block;
+    }
+    
+    .logo {
+      font-size: 4rem;
+      font-style:bold;
+      color:darkgoldenrod;
+      text-transform: uppercase;
+      word-spacing:1rem;
+      font-family: 'Rubik Moonrocks', cursive;
+      letter-spacing: 2px;
+         animation: fadein 2s ease-in;
+      
+    }
+          @keyframes fadein { 
+  from { opacity: 0; }
+  to { opacity: 1; }
+} 
+       
+
+    .btns {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .log{
+      color: black;
+      padding: 0.6rem 1rem;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      background-color: white;
+      cursor: pointer;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.3rem;
+      transition: all 0.3s ease;
+    }
+
+    .log:hover {
+      background-color: orangered;
+      color: white;
+    }
+
+    .watsapp-btn {
+      background: linear-gradient(45deg, #25d366, #128c7e);
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .watsapp-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+
+    hr {
+      margin: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+
+      .logo {
+        text-align: center;
+        width: 100%;
+      }
+
+      .btns {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      .log, .watsapp-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+      }
+    }
+        /* first section */
+
+    .oj-collection{
+      display: flex;
+      justify-content: center;
+width:100%;
+      min-height:100vh;
+      align-items: center;
+      flex-direction: column;
+      background-size: cover;
+      background-attachment:fixed;
+      background-position:center;
+      background-image: url("../picture/oj.jpg"); 
+background-repeat:no-repeat; 
+   animation: fadein 2s ease-in;
+      
+    }
+          @keyframes fadein { 
+  from { opacity: 0; }
+  to { opacity: 1; }
+} 
+
+.oj-collection h1{
+    color: goldenrod;
+    font-size: 4rem;
+    font-family: 'Rubik Moonrocks', cursive, sans-serif;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+     
+  }
+
+  .oj-collection h5{
+    color: goldenrod;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+  
+  }
+   .btn {
+    display: flex;
+    gap: 12px;
+    margin-top:20px;
+    justify-content: center; /* center align */
+    
+}
+
+.btn1, .btn2 {
+    padding: 12px 24px;       /* top bottom left right */
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: all 0.3s ease; /* smooth hover effect */
+}
+
+
+/* learn button */
+.btn1 {
+    background-color:black;
+    color: white;
+    border: none;
+}
+
+/* Buy button */
+.btn2 {
+    background-color: black;
+    color: white;
+    border:none;
+}
+
+/* Hover effects */
+.btn1:hover {
+    background-color: #005bb5;
+}
+.btn2:hover {
+    background-color: #111;
+}
+/* section wedding */
+ .slider {
+  position: relative; /* it keep  own places only moves  then give top left right bottom*/
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height:auto;
+  background: #fff;
+  border: 1px solid white;
+}
+
+.slider-track {
+  display: flex;
+  align-items: center;
+  animation: scroll 15s linear infinite;
+}
+
+    .slider img {
+      width:400px;   /* image size */
+     height:250px;  /* fixed height */
+    margin: 10px;
+      display: inline;
+      object-fit: cover;
+      opacity:1.5;
+
+    } 
+
+
+    /* Animation */
+     @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+
+     }
+/* section valima */
+ .slider2 {
+  position: relative; /* it keep  own places only moves  then give top left right bottom*/
+  overflow: hidden;
+  white-space: nowrap;
+  width:100%;
+  height:auto;
+  background: #fff;
+  border: 1px solid white;
+}
+
+.slider-track2 {
+  display: flex;
+  align-items: center;
+  animation: scroll 15s linear infinite;
+}
+
+    .slider2 img {
+      width:500px;   /* image size */
+     height:250px;  /* fixed height */
+    margin: 10px;
+      display: inline;
+      object-fit: cover;
+      opacity:1.5;
+
+    } 
+
+
+
+    /* Animation */
+     @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+
+     }
+     @media (max-width: 768px) {
+  .slider img,
+  .slider2 img {
+    max-width: 250px;
+  }
+}
+
+
+@keyframes rotateZoom {
+  0% { transform: scale(0.5) rotate(-180deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+.animate-rotateZoom {
+  animation: rotateZoom 1.2s ease-in-out forwards;
+}
+.newsletter-container {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .newsletter-container h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #222;
+  }
+
+  .newsletter-input {
+    position: relative;
+    width:50%;
+    margin-bottom: 25px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .newsletter-input input {
+    width: 100%;
+    padding: 14px 50px 14px 20px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .newsletter-input input:focus {
+    border-color: #007bff;
+  }
+
+  .newsletter-input button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #007bff;
+    cursor: pointer;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icons a.facebook { background: #1877f2; }
+  .social-icons a.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); }
+  .social-icons a.tiktok { background: #000; }
+  .social-icons a.youtube { background: #ff0000; }
+  .social-icons a.linkedin { background: #0077b5; }
+  .social-icons a.snapchat { background: #fffc00; color: #000; }
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <!-- header about information -->
+  <header>
+    
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>|
+        <li><a href="#">About</a></li>|
+        <li><a href="#">Prices</a></li>|
+        <li><a href="#">What's New</a></li>
+      </ul>
+    
+    </nav>
+       <div class="logo">OJ Collection</div>
+    <div class="btns">
+      <button class="log">Log In</button>
+      <button class="watsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </button>
+    </div>
+  </header>
+
+  <hr>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto text-center">
+          <li class="nav-item" style="font-family: 'Dancing Script', cursive;">
+            <a class="nav-link active" aria-current="page" href="#">Blog</a>
+          </li>
+
+          <li class="nav-item dropdown" style="font-family:'Dancing Script', cursive;">
+            <a class="nav-link dropdown-toggle text-center" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Varieties
+            </a>
+            <ul class="dropdown-menu text-center" style="font-family:'Dancing Script', cursive;">
+              <li><a class="dropdown-item" href="#">Cotton</a></li>
+              <li><a class="dropdown-item" href="#">Lawn</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Bridal</a></li>
+              <li><a class="dropdown-item" href="#">Banarsi</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item text-center" style="font-family: 'Dancing Script', cursive;">
+            <a class="nav-link" href="#">find an area</a>
+          </li>
+
+          <li class="nav-item text-center" style="font-family: 'Dancing Script', cursive;">
+            <a class="nav-link" href="#">starting up</a>
+          </li>
+
+          <li class="nav-item text-center" style="font-family: 'Dancing Script', cursive;">
+            <a class="nav-link" href="#">marketing</a>
+          </li>
+            
+        </ul>
+        <button class="log">sign-up</button>
+          
+        
+      </div>
+    </div>
+  </nav>
+  <hr>
+       <!-- first section -->
+             <section class="oj-collection">
+            
+        <h1>ALL VERIETIES</h1>
+        <h5>available for you</h5>
+        <div class="btn">
+        <button class="btn1">learn more</button>
+        <button class="btn2">buy</button>
+    </div>
+       
+        
+
+    
+    </section>
+    <!-- section wedding -->
+       <section>
+          <section> <div style="background-color:white;font-size:100px;text-align: center;color: hsl(0, 55%, 4%); padding:20px;" >WEDDING DRESSES<h2></h2>
+    <div class="slider">
+      <div class="slider-track">
+         <!-- 6 images -->
+     
+          <img src="../picture/wedding.jfif" alt="1">
+  
+        <img src="../picture//bridal.jpg" alt="2">
+ 
+    
+        <img src="../picture/sharara.jpg" alt="3">
+        
+
+        <img src="../picture/download5.jfif" alt="4">
+    
+
+        <img src="../picture/download5 - Copy.jfif" alt="5">
+    <img src="../picture/bridal5.jfif" alt="6">
+
+      
+
+
+       
+        
+    
+ 
+
+
+         <!-- repeat same 6 images for smooth looping  -->
+         <img src="../picture/wedding.jfif" alt="1">
+         
+        <img src="../picture/bridal.jpg" alt="2">
+      
+        <img src="../picture/sharara.jpg" alt="3">
+        
+        <img src="../picture/download5.jfif" alt="4">
+            <img src="../picture/download5 - Copy.jfif" alt="5">
+    <img src="../picture/bridal5.jfif" alt="6">
+      
+
+
+        
+  
+      </div>
+    </div>
+  </section> 
+  <!-- section valima  -->
+         <section> <div style="background-color:white;font-size:100px;text-align: center;color: hsl(0, 14%, 83%); padding:20px;" >VALIMA DRESSES<h2>
+    <div class="slider2">
+      <div class="slider-track2">
+         <!-- 6 images -->
+     
+          <img src="../picture/valima.jpg" alt="1">
+  
+        <img src="../picture/bridal6.jpg" alt="2">
+ 
+    
+        <img src="../picture/bridal4.jfif" alt="3">
+        
+     <img src="../picture/bridal3.jfif" alt="4">
+      
+
+      
+
+
+       
+        
+    
+ 
+
+
+         <!-- repeat same 6 images for smooth looping  -->
+         <img src="../picture/valima.jpg" alt="1">
+         
+        <img src="../picture/bridal6.jpg" alt="2">
+      
+        <img src="../picture/bridal4.jfif" alt="3">
+        
+        <img src="../picture/bridal3.jfif" alt="4">
+      
+      
+
+        
+  
+      </div>
+    </div>
+
+  </section> 
+  <!-- section suits -->
+
+<!-- 
+
+      <div class="container text-center">
+  <div class="row ">
+    <div class="col-sm-3 text-center my-4 ">
+ <img src="../picture/suit1.jpg" class="w-100 h-10 card p-4 mx-auto animate-slide  img-fluid rounded shadow animate-rotateZoom "  alt="picture">
+      <button class="btn btn-dark p-2 mt-3 d-block mx-auto border-radius-10">View Details</button>
+    </div>
+
+    <div class="col-sm-3 text-center my-4">
+      <img src="../picture/suit2.jpg" class="w-100 h-100 card p-4 mx-auto animate-slide  img-fluid rounded shadow animate-rotateZoom " alt="picture">
+      <button class="btn btn-dark p-2 mt-3 d-block mx-auto border-radius-10">View Details</button>
+    </div>
+
+    <div class="col-sm-3 text-center my-4">
+      <img src="../picture/suit6.jpg" class=" w-100 h-100 card p-4 mx-auto animate-slide  img-fluid rounded shadow animate-rotateZoom" alt="picture">
+      <button class="btn btn-dark p-2 mt-3 d-block mx-auto border-radius-10">View Details</button>
+    </div>
+
+    <div class="col-sm-3 text-center my-4">
+      <img src="../picture/suit4.jpg" class="w-100 h-100 card p-4 mx-auto animate-slide  img-fluid rounded shadow animate-rotateZoom" alt="picture">
+      <button class="btn btn-dark p-2 mt-3 d-block mx-auto border-radius-10 mb-3 ">view detail</button>
+    </div>
+  
+  
+    
+    
+
+   <!-- <div class="row text-center my-4"> - -->
+    <!-- <div class="col-sm-3 text-center my-4 mt-">
+      <img src="../picture/suit2.jpg" class="rounded-circle w-100 h-100 card p-4 mx-auto animate-slide " alt="picture" >
+      <button class="btn btn-dark p-2 mt-3 d-block mx-auto border-radius-10">view detail</button>
+    </div>
+
+    <div class="col-sm-3 text-center my-4">
+      <img src="../picture/suit1.jpg" class="rounded-circle w-100 h-100 card p-4 mx-auto animate-slide" alt="picture">
+      <button class="btn btn-dark p-2 mt-3 d-block mx-auto border-radius-10">view detail</button>
+    </div>
+
+    <div class="col-sm-3 text-center my-4">
+      <img src="../picture/suit8.jpg" class="rounded-circle w-100 h-100 card p-4 mx-auto animate-slide" alt="picture">
+      <button class="btn btn-dark p-2 mt-3 d-block mx-auto border-radius-10">view detail</button>
+    </div>
+
+    <div class="col-sm-3 text-center my-4">
+      <img src="../picture/suit8.jpg" class="rounded-circle w-100 h-100 card p-4 mx-auto animate-slide" alt="picture">
+      <button class="btn btn-dark p-2 mt-4 d-block mx-auto border-radius-10">view detail</button>
+    </div>
+  </div>
+</div> --> -->
+<!-- SUITS SECTION -->
+<section class="container text-center my-3">
+  <h2 class="mb-4" style="font-family: 'Dancing Script', cursive; color: goldenrod;">Exclusive Suit Collection</h2>
+
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card shadow animate-rotateZoom">
+        <img src="../picture/suit1.jpg" class="card-img-top img-fluid" alt="Suit 1">
+        <div class="card-body text-center">
+          <button class="btn btn-dark d-block mx-auto">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card shadow animate-rotateZoom">
+        <img src="../picture/suit2.jpg" class="card-img-top img-fluid" alt="Suit 2">
+        <div class="card-body text-center">
+          <button class="btn btn-dark d-block mx-auto">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card shadow animate-rotateZoom">
+        <img src="../picture/suit6.jpg" class="card-img-top img-fluid" alt="Suit 3">
+        <div class="card-body text-center">
+          <button class="btn btn-dark d-block mx-auto">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card shadow animate-rotateZoom">
+        <img src="../picture/suit6.jpg" class="card-img-top img-fluid" alt="Suit 3">
+        <div class="card-body text-center">
+          <button class="btn btn-dark d-block mx-auto">View Details</button>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Card 5 -->
+         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card shadow animate-rotateZoom">
+        <img src="../picture/suit4.jpg" class="card-img-top img-fluid" alt="Suit 4">
+        <div class="card-body text-center">
+          <button class="btn btn-dark d-block mx-auto">View Details</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Card 6 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card shadow animate-rotateZoom">
+        <img src="../picture/suit4.jpg" class="card-img-top img-fluid" alt="Suit 4">
+        <div class="card-body text-center">
+          <button class="btn btn-dark d-block mx-auto">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card shadow animate-rotateZoom">
+        <img src="../picture/suit4.jpg" class="card-img-top img-fluid" alt="Suit 4">
+        <div class="card-body text-center">
+          <button class="btn btn-dark d-block mx-auto">View Details</button>
+        </div>
+      </div>
+    </div>
+    <!-- Card 8 -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card shadow animate-rotateZoom">
+        <img src="../picture/suit4.jpg" class="card-img-top img-fluid" alt="Suit 4">
+        <div class="card-body text-center">
+          <button class="btn btn-dark d-block mx-auto">View Details</button>
+        </div>
+      </div>
+    </div>
+</section>
+<div class="newsletter-container">
+  <h2>Sign Up to your Newsletter</h2>
+  <div class="newsletter-input">
+    <input type="email" placeholder="Enter your email...">
+    <button><i class="fas fa-paper-plane"></i></button>
+  </div>
+  <div class="social-icons">
+    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" class="snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+  </div>
+</div>
+
+
+  <!-- footer -->
+  <footer class="text-center text-lg-start bg-light text-muted mt-5">
+    <div class="text-center p-4" style="background-color: #f1f1f1;">
+      © 2025 OJ Collection. All rights reserved.
+    </div>
+  </footer>
+       
+
+
+   
+
+
+    
+</body>
+
+</html>
+
+
+
+
+
+

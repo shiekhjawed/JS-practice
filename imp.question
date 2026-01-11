@@ -1,0 +1,764 @@
+
+
+
+Here are some important jQuery questions and answers that are commonly asked in interviews or essential for mastering jQuery.
+
+
+---
+
+📌 Important jQuery Questions and Answers
+
+
+---
+
+🔹 1. What is jQuery?
+
+Answer:
+jQuery is a fast, small, and feature-rich JavaScript library. It simplifies tasks like DOM manipulation, event handling, AJAX calls, and animations using fewer lines of code.
+
+
+---
+
+🔹 2. How do you include jQuery in a project?
+
+Answer: Use a CDN (e.g., Google, jQuery) or download it.
+
+<!-- From CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+---
+
+🔹 3. What is the $() function in jQuery?
+
+Answer:
+The $() is a shorthand for the jQuery function, used to select HTML elements, create elements, or run code on document ready.
+
+$(document).ready(function() {
+  // jQuery code here
+});
+
+
+---
+
+🔹 4. What is the difference between $(document).ready() and window.onload?
+
+Answer:
+
+Feature	$(document).ready()	window.onload
+
+When it runs	After DOM is ready	After full page loads (including images, iframes, etc.)
+Faster	✅ Yes	❌ No
+Multiple allowed	✅ Yes	❌ Only one
+
+
+
+---
+
+🔹 5. How to select elements in jQuery?
+
+Answer:
+
+$('#id')          // Select by ID
+$('.class')       // Select by class
+$('div')          // Select by tag
+$('input[name="email"]')  // By attribute
+
+
+---
+
+🔹 6. How do you hide/show elements in jQuery?
+
+Answer:
+
+$('#box').hide();    // Hide element
+$('#box').show();    // Show element
+$('#box').toggle();  // Toggle visibility
+
+
+---
+
+🔹 7. What is the difference between .text() and .html()?
+
+Answer:
+
+Method	Description
+
+.text()	Gets/sets plain text content
+.html()	Gets/sets HTML content
+
+
+
+---
+
+🔹 8. How to add a class or remove a class in jQuery?
+
+Answer:
+
+$('#element').addClass('active');
+$('#element').removeClass('active');
+$('#element').toggleClass('active');
+
+
+---
+
+🔹 9. How to handle events in jQuery?
+
+Answer:
+
+$('#btn').click(function() {
+  alert('Button clicked!');
+});
+
+$('input').on('keyup', function() {
+  console.log($(this).val());
+});
+
+
+---
+
+🔹 10. What is chaining in jQuery?
+
+Answer:
+Chaining means calling multiple methods on the same element in a single line.
+
+$('#box').css('color', 'red').slideUp().slideDown();
+
+
+---
+
+🔹 11. How to make an AJAX request in jQuery?
+
+Answer:
+
+$.ajax({
+  url: 'data.json',
+  method: 'GET',
+  success: function(data) {
+    console.log(data);
+  },
+  error: function(error) {
+    console.error('Error:', error);
+  }
+});
+
+
+---
+
+🔹 12. What is each() in jQuery?
+
+Answer: Used to loop through elements.
+
+$('li').each(function(index, element) {
+  console.log(index, $(element).text());
+});
+
+
+---
+
+🔹 13. Difference between prop() and attr()?
+
+Answer:
+
+Method	Use for	Example
+
+attr()	HTML attributes	checked, href, etc.
+prop()	DOM properties	checked, disabled, etc.
+
+
+$('input').prop('checked'); // true/false
+$('input').attr('checked'); // "checked" or undefined
+
+
+---
+
+🔹 14. How to stop event bubbling in jQuery?
+
+Answer:
+
+$('#child').click(function(event) {
+  event.stopPropagation();
+});
+
+
+---
+
+🔹 15. What are jQuery effects?
+
+Answer: jQuery provides methods to create effects and animations:
+
+.hide(), .show()
+
+.fadeIn(), .fadeOut()
+
+.slideUp(), .slideDown()
+
+.animate()
+
+
+
+---
+
+Would you like these as:
+
+✅ A printable PDF
+
+✅ A cheat sheet image
+
+✅ Or quiz-style practice questions?
+
+
+Let me know what format helps you best!
+Perfect 👍 — here’s a **complete and organized guide** covering **all the important JavaScript questions and answers**, including **interview questions, key concepts, and examples**.
+
+---
+
+## 🧠 1. **Core JavaScript Concepts**
+
+### 1. What is JavaScript?
+
+JavaScript is a **lightweight, interpreted scripting language** used to make web pages interactive. It runs on the **client side** (browser) and can also run on the **server side** (using Node.js).
+
+---
+
+### 2. What are variables in JavaScript?
+
+Variables store data values. You can declare them using:
+
+```js
+var name = "John";   // function-scoped
+let age = 25;        // block-scoped
+const city = "Delhi"; // constant
+```
+
+---
+
+### 3. What is the difference between `var`, `let`, and `const`?
+
+| Feature       | var             | let       | const     |
+| ------------- | --------------- | --------- | --------- |
+| Scope         | Function        | Block     | Block     |
+| Redeclaration | Yes             | No        | No        |
+| Reassignment  | Yes             | Yes       | No        |
+| Hoisted       | Yes (undefined) | Yes (TDZ) | Yes (TDZ) |
+
+---
+
+### 4. What is **Hoisting**?
+
+Hoisting means moving variable and function declarations to the top of their scope during compilation.
+
+Example:
+
+```js
+console.log(a); // undefined
+var a = 10;
+```
+
+---
+
+### 5. What is a **Closure**?
+
+A closure is when a function “remembers” the variables from its outer scope, even after that scope has finished executing.
+
+Example:
+
+```js
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    return count;
+  }
+}
+
+const counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2
+```
+
+---
+
+### 6. What are **Arrow Functions**?
+
+A shorter syntax for writing functions:
+
+```js
+const add = (a, b) => a + b;
+```
+
+Arrow functions **don’t have their own `this`**.
+
+---
+
+### 7. What is the difference between `==` and `===`?
+
+* `==` → compares **values only** (performs type conversion)
+* `===` → compares **values and types** (strict comparison)
+
+Example:
+
+```js
+0 == "0"   // true
+0 === "0"  // false
+```
+
+---
+
+### 8. What is the **DOM**?
+
+DOM (Document Object Model) represents the structure of an HTML document as objects that can be manipulated with JavaScript.
+
+Example:
+
+```js
+document.getElementById("demo").innerHTML = "Hello World";
+```
+
+---
+
+### 9. What are **Events** in JavaScript?
+
+Events are actions like clicking, typing, or loading. Example:
+
+```js
+<button onclick="alert('Clicked!')">Click Me</button>
+```
+
+---
+
+### 10. What is **Event Bubbling** and **Event Capturing**?
+
+* **Bubbling**: Events move from child → parent (default)
+* **Capturing**: Events move from parent → child
+  Use `{capture: true}` to enable capturing.
+
+---
+
+## ⚙️ 2. **Advanced JavaScript Concepts**
+
+### 11. What are **Promises**?
+
+Promises handle asynchronous operations and represent a value that may be available now, later, or never.
+
+```js
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Done!"), 1000);
+});
+
+promise.then(result => console.log(result)); // "Done!"
+```
+
+---
+
+### 12. What are **async/await**?
+
+Used to write asynchronous code in a synchronous style.
+
+```js
+async function getData() {
+  let data = await fetch("https://api.example.com/data");
+  return await data.json();
+}
+```
+
+---
+
+### 13. What is **this** in JavaScript?
+
+`this` refers to the **object that owns the function** being executed.
+
+* In global scope → `window`
+* In object method → that object
+* In arrow functions → inherited from parent scope
+
+---
+
+### 14. What are **Classes** in JavaScript?
+
+Classes are templates for creating objects.
+
+```js
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    console.log(`Hello ${this.name}`);
+  }
+}
+
+const user = new Person("Alice");
+user.greet(); // Hello Alice
+```
+
+---
+
+### 15. What is **Prototype Inheritance**?
+
+All JavaScript objects inherit properties and methods from a prototype.
+
+Example:
+
+```js
+function Animal(name) {
+  this.name = name;
+}
+Animal.prototype.speak = function() {
+  console.log(`${this.name} makes a noise.`);
+};
+
+let dog = new Animal("Dog");
+dog.speak(); // Dog makes a noise.
+```
+
+---
+
+## 📦 3. **Data Types and Conversion**
+
+### 16. What are JavaScript Data Types?
+
+* **Primitive**: string, number, boolean, null, undefined, symbol, bigint
+* **Non-primitive**: object, array, function
+
+---
+
+### 17. Type Conversion Examples:
+
+```js
+String(123);   // "123"
+Number("123"); // 123
+Boolean(0);    // false
+```
+
+---
+
+## 🧩 4. **Important Interview Questions**
+
+### 18. Difference between `null` and `undefined`?
+
+* `undefined` → variable declared but not assigned
+* `null` → intentional absence of value
+
+---
+
+### 19. What is the **Event Loop**?
+
+The event loop continuously checks the call stack and message queue to execute asynchronous callbacks.
+
+---
+
+### 20. What is **Local Storage** vs **Session Storage**?
+
+| Feature  | LocalStorage | SessionStorage           |
+| -------- | ------------ | ------------------------ |
+| Lifetime | Permanent    | Until browser/tab closes |
+| Scope    | Domain       | Browser tab              |
+| Size     | ~5MB         | ~5MB                     |
+
+---
+
+### 21. What is **JSON**?
+
+JavaScript Object Notation — used for data exchange.
+
+```js
+const obj = { name: "John", age: 25 };
+const json = JSON.stringify(obj);
+const parsed = JSON.parse(json);
+```
+
+---
+
+## 🧮 5. **Common Coding Questions**
+
+1. **Reverse a String**
+
+```js
+function reverse(str) {
+  return str.split("").reverse().join("");
+}
+```
+
+2. **Check for Palindrome**
+
+```js
+function isPalindrome(str) {
+  str = str.toLowerCase();
+  return str === str.split("").reverse().join("");
+}
+```
+
+3. **Find Maximum Number in Array**
+
+```js
+let arr = [10, 45, 2, 99];
+console.log(Math.max(...arr));
+```
+
+4. **Sum of Array**
+
+```js
+let sum = arr.reduce((a, b) => a + b, 0);
+```
+
+---
+
+## 🧰 6. **ES6+ Features**
+
+| Feature            | Example                          |
+| ------------------ | -------------------------------- |
+| Template Literals  | `` `Hello ${name}` ``            |
+| Destructuring      | `const {x, y} = point;`          |
+| Spread Operator    | `[...arr1, ...arr2]`             |
+| Default Parameters | `function greet(name="User") {}` |
+| Modules            | `export` / `import`              |
+
+---
+
+## 🧾 7. **Bonus Topics**
+
+* **Debouncing & Throttling** – for optimizing events
+* **Currying** – breaking a function into smaller ones
+* **Map, Filter, Reduce** – functional array methods
+* **Set & Map objects** – for unique values and key-value pairs
+
+---
+key jQuery function to used
+Would you like me to give you a **PDF or printable notes version** of these important JavaScript Q&A for study or interview prep?
+| Function                 | Meaning                       |
+| ------------------------ | ----------------------------- |
+| `$(selector)`            | Selects HTML elements         |
+| `.click()`               | Adds a click event listener   |
+| `.fadeToggle()`          | Fades element in/out          |
+| `.toggleClass()`         | Adds/removes a CSS class      |
+| `.submit()`              | Handles form submission       |
+| `event.preventDefault()` | Stops the page from reloading |
+| `.val()`                 | Gets input field value        |
+Great 👏 — here are some of the **most important and commonly asked JavaScript questions** that will help you in interviews 💻 and practical coding.
+
+I’ve divided them into **Basic, Intermediate, and Advanced** levels for easy learning 👇
+
+---
+
+## 🟢 **Basic JavaScript Questions**
+
+| #  | Question                                       | Short Answer                                                                          |
+| -- | ---------------------------------------------- | ------------------------------------------------------------------------------------- |
+| 1  | What is JavaScript?                            | A scripting language used to make web pages dynamic and interactive.                  |
+| 2  | What are variables?                            | Variables store data values. Example: `let name = "Ahmed";`                           |
+| 3  | Difference between `var`, `let`, and `const`?  | `var` = function-scoped, `let` & `const` = block-scoped; `const` values can’t change. |
+| 4  | What are data types in JavaScript?             | String, Number, Boolean, Object, Array, Null, Undefined, Symbol, BigInt               |
+| 5  | What is an array?                              | A collection of items. Example: `let fruits = ["Apple", "Mango"];`                    |
+| 6  | What is an object?                             | A data structure with key–value pairs. Example: `{name: "Ali", age: 20}`              |
+| 7  | What is the difference between `==` and `===`? | `==` compares values only, `===` compares **value + type**.                           |
+| 8  | What is `NaN`?                                 | “Not a Number” – returned when a math operation fails. Example: `parseInt("abc")`     |
+| 9  | What is `null` vs `undefined`?                 | `null` = intentionally empty value, `undefined` = variable not assigned a value.      |
+| 10 | How do you write a function?                   | `function greet(){ console.log("Hello"); }`                                           |
+
+---
+
+## 🟡 **Intermediate JavaScript Questions**
+
+| #  | Question                         | Short Answer                                                                              |
+| -- | -------------------------------- | ----------------------------------------------------------------------------------------- |
+| 11 | What is a callback function?     | A function passed into another function as an argument.                                   |
+| 12 | What is an arrow function?       | A shorter way to write functions. Example: `const add = (a,b) => a+b;`                    |
+| 13 | What is a promise?               | Used for asynchronous operations (like AJAX).                                             |
+| 14 | What is `async` and `await`?     | Keywords for writing asynchronous code that looks synchronous.                            |
+| 15 | What is DOM?                     | Document Object Model – represents the HTML structure of a web page.                      |
+| 16 | How to select an element in DOM? | `document.getElementById("id")` or `document.querySelector(".class")`                     |
+| 17 | What is event bubbling?          | When an event on a child element triggers handlers on its parent elements.                |
+| 18 | What is `this` keyword?          | Refers to the current object or context.                                                  |
+| 19 | What is hoisting?                | JavaScript moves variable and function declarations to the top of their scope.            |
+| 20 | What is closure?                 | A function that remembers its outer variables even after the outer function has finished. |
+
+---
+
+## 🔵 **Advanced JavaScript Questions**
+
+| #  | Question                                                                | Short Answer                                                                            |
+| -- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| 21 | What is the difference between synchronous and asynchronous JavaScript? | Synchronous = one task at a time, Asynchronous = tasks can run in the background.       |
+| 22 | What is an IIFE?                                                        | Immediately Invoked Function Expression – runs as soon as it’s defined.                 |
+| 23 | What is event delegation?                                               | Handling events at a parent level instead of each child element.                        |
+| 24 | What are template literals?                                             | Strings written with backticks `` `Hello ${name}` `` allowing variables inside.         |
+| 25 | What is destructuring?                                                  | Extracting values from arrays or objects into variables.                                |
+| 26 | What is localStorage and sessionStorage?                                | Browser storage: `localStorage` = permanent, `sessionStorage` = cleared on tab close.   |
+| 27 | What is JSON?                                                           | JavaScript Object Notation — used for sending data between client and server.           |
+| 28 | What is the difference between `map()`, `forEach()`, and `filter()`?    | `map()` returns a new array, `forEach()` doesn’t, `filter()` returns matching elements. |
+| 29 | What is the event loop?                                                 | The mechanism that handles asynchronous tasks in JavaScript.                            |
+| 30 | What is difference between `undefined` and `not defined`?               | `undefined` = declared but not assigned, `not defined` = variable never declared.       |
+
+---
+
+Would you like me to give you a **list of JavaScript interview questions with answers in Urdu** (for better understanding)?
+It’s very helpful if you’re preparing for web development interviews.
+Excellent question 👏 — this is a **very common confusion** for beginners:
+
+> ❓ “Is JSON the same as a JavaScript object?”
+
+Let’s clear it up step by step 👇
+
+---
+
+## 🧩 **Short Answer**
+
+> ❌ JSON is **not exactly** the same as a JavaScript object,
+> but they are **closely related**.
+
+---
+
+## ✅ **1. JavaScript Object**
+
+A **JavaScript Object** is a data structure used directly in JavaScript code.
+
+Example 👇
+
+```js
+let user = {
+  name: "Ahmed",
+  age: 22,
+  city: "Karachi"
+};
+```
+
+🧠 Here:
+
+* It’s a **real JavaScript object** (you can use it in your code).
+* You can access data like `user.name` or `user.age`.
+
+---
+
+## ✅ **2. JSON (JavaScript Object Notation)**
+
+**JSON** is a **data format (text)** used for storing or transferring data — e.g., between a website and a server.
+
+Example 👇
+
+```json
+{
+  "name": "Ahmed",
+  "age": 22,
+  "city": "Karachi"
+}
+```
+
+🧠 Here:
+
+* It looks like a JavaScript object, **but it’s just a string**.
+* You **can’t** access it using `.` until you convert it.
+
+---
+
+## 🔁 **3. Difference in Action**
+
+| Feature | JavaScript Object          | JSON                                  |
+| ------- | -------------------------- | ------------------------------------- |
+| Type    | Actual object in JS        | Text / String format                  |
+| Quotes  | Keys can be without quotes | Keys **must** have double quotes      |
+| Use     | For logic inside JS code   | For data exchange (e.g., APIs)        |
+| Access  | `user.name`                | First convert: `JSON.parse(jsonText)` |
+| Example | `{name: "Ali"}`            | `{"name": "Ali"}`                     |
+
+---
+
+## 🧠 **4. Convert Between Them**
+
+### ✅ Object ➡️ JSON
+
+Use `JSON.stringify()`
+
+```js
+let user = { name: "Ahmed", age: 22 };
+let jsonData = JSON.stringify(user);
+console.log(jsonData);
+// Output: {"name":"Ahmed","age":22}
+```
+
+### ✅ JSON ➡️ Object
+
+Use `JSON.parse()`
+
+```js
+let jsonText = '{"name":"Ahmed","age":22}';
+let obj = JSON.parse(jsonText);
+console.log(obj.name);
+// Output: Ahmed
+```
+
+---
+
+## 🗣 **5. In Simple Urdu:**
+
+> **JSON aur JavaScript Object aik jaisay lagtay hain,**
+> lekin **JSON sirf data ka text format hota hai** (string).
+>
+> JavaScript Object code mein use hota hai — us par direct operations kar sakte ho.
+>
+> JSON usually **server se data bhejnay ya lene** ke liye use hota hai.
+
+---
+
+Would you like me to show a **practical example** of how JSON works with AJAX in jQuery or JavaScript (sending and receiving JSON from PHP)?
+what is dom
+💯 **Bilkul sahi kaha aap ne!** 👏
+
+Jo aap keh rahe ho —
+
+> “Ek tree-like structure hota hai jo HTML web page ka structure represent karta hai”
+
+— wo actually **DOM** kehlata hai 👇
+
+---
+
+## 🧩 **DOM — Document Object Model**
+
+### 🔹 Full Form:
+
+> **D**ocument **O**bject **M**odel
+
+---
+
+### 🧠 **Simple Definition:**
+
+**DOM ek tree-like structure hota hai** jo browser HTML page ko samajhne aur manipulate karne ke liye banata hai.
+
+> Har HTML tag (jaise `<html>`, `<body>`, `<div>`, `<p>` etc.) ek **node** kehlata hai.
+> Ye nodes **parent–child** relationship mein arranged hote hain — jaise ek **family tree**.
+
+---
+
+### 🌳 **Example**
+
+#### 🧾 HTML Code:
+
+```html
+<html>
+  <body>
+    <h1>Hello</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+```
+
+#### 🌲 DOM Structure (Tree View):
+
+```
+Document
+ └── html
+     └── body
+         ├── h1
+         │    └── "Hello"
+         └── p
+              └── "This is a paragraph."
+```
+
+---
+
+### 💡 **Why DOM is Important**
+DOM ek aisi structure hai jo browser HTML page ko tree ke form mein represent karta hai.
+
+Har tag ek “node” hota hai, aur JavaScript us tree ke nodes ko read, change, add, ya delete kar sakti hai
+
+

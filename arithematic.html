@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <script>
+ //let var const keyword
+       // variable are conainer for which is value can be changed Variables are containers for data, and their values can be changed." ✅
+//var is a global scope means everywhere declare variable can be redeclared  and updated
+    //     arithematic operator
+    //let and const are block scope es6 new rule variable cannot redeclared nahi bata hy konsa variable hy but can be updated same const which means not change
+//     1. Declare (اعلان کرنا)
+
+// جب آپ پہلی بار کوئی variable بناتے ہیں تو اسے declare کرنا کہتے ہیں۔
+// یعنی JavaScript کو بتانا کہ یہ ایک variable ہے۔
+
+// مثال:
+// let name = "Ali";   // یہاں variable declare کیا گیا ہے
+
+// 2. Redeclare (دوبارہ اعلان کرنا)
+
+// جب آپ اسی نام کا variable دوبارہ بناتے ہیں تو اسے redeclare کہا جاتا ہے۔
+
+// مثال:
+// var city = "Lahore";  
+// var city = "Karachi";  // یہ redeclare ہے (var کے ساتھ allowed ہے)
+// var city = "Lahore";
+// var city = "Karachi";   // redeclare allowed
+// city = "Islamabad";     // value change allowed
+// let name = "Ali";
+// let
+
+// Redeclare ❌
+
+// Value change ✅
+// // let name = "Ahmed"; ❌ Error
+// name = "Ahmed";        // ✅ allowed
+//Redeclare ❌
+
+// Value change ❌
+
+// const country = "Pakistan";
+// // const country = "India"; ❌ Error
+// // country = "China"; ❌ Error
+// arithemetic operator
+// +,-,*,/
+// modulus
+// exponentiation
+// increment 
+// decrement 
+    // let
+    // a=5
+    // b=2
+    // console.log("a=",a,"b=",b,)
+    // console.log("a+b=",a+b);
+    // console.log("a-b=",a-b)
+    // console.log("a*b=",a*b);
+    // console.log("a/b=",a/b);
+    // // console.log(typeof(a/b))
+    // console.log("a%b=",a%b) 
+    // console.log("a**b=",a**b)//5^2 
+    
+    //   unary operator they need single operator increment++ decrement--
+
+     a=5
+     b=2
+
+    //   console.log("a=",a,"b=",b,)
+    // //   a-- ,a=a-1
+    // //   a++; ,a=a+1
+    //   console.log("a=",a)
+    // //  pre increament always come first come not after
+    // console.log("a++=",a++);//5
+    // console.log("a=",a)//6
+    // // post increament
+    //   console.log("++a=",++a)
+    //  //pre-increament always come first come not after
+    // console.log("a--=",a--);
+    // console.log("a=",a)
+    // console.log("a--=",a--)
+  // ASSIGNMENT OPERATOR
+    // assignment operator to assign a value in a variable means var
+    // assignment operator variable ko save krwata hy other side ki defination
+    // means in js go right to left  =,+=,-=,*=,%=,**= a+=4 means a=a+4 means a += 4 all arithemetics oprator ae used in assignment operator form
+    // comparision operator == equal to =!not equal to > >= greater than greater then equal to < <= less tan
+//    a=5  // number
+//  b="7"  //string    //--->convert into number
+//    console.log("a===b",a===b) //false strick equal to and type
+//    console.log("a!==b",a!==b) //true not equal to and type
+
+    // a+=4;//a=a+4
+    // console.log("a=",a)
+
+    // a**=4;//a=**4
+
+    // console.log("a=",a)
+    // exponanciation
+    // a%=4;//a=a%4
+    // console.log("a=",a)
+//     let num=prompt("enter a number:")
+//   if(num % 5===0) {
+//   console.log(num, "is a multiple of 5");
+//  } else {
+//     console.log(num,"is Not a multiple of 5");
+
+// }l
+// logical operator
+// logical operator multilple value ka single answer deta hy true or false
+//logical AND && condition 1 true and condition 2 is true then logical operator give true then otherwise false
+//logical OR || only one condition istrue then true and only both false then false
+//logical Not ! reverse tue then false ,false then true
+// question no #2
+// var score= Number(prompt("please enter your score(0-100):"))
+// var grade;
+// if(score >=90 && score<=100){
+//     grade="A";
+    
+// } else if(score >=70 && score<=89) {
+//     grade="B"
+// } else if(score >=60 && score<=69) {
+//     grade="c"
+// } else if (score >=50 && score<=59){
+//     grade="D"
+// } else if(score >=0 && score <=49){
+
+// } grade="F"
+// console.log("according to your score, your grade was:", +grade);
+// loop
+// 
+// for (var count=1 count<=10; count++) {
+//     console.log("amber")
+// print all even Number from 0 -100 QUESTION
+// for(var num=0; num<=100; num++){
+//   if(num % 2 ===0){
+//   console.log("num=",num);
+// }
+// }
+// odd number
+// for(var num=0; num<=100; num++){
+//   if(num %2  !==0){      //means not equal
+//   console.log("num=",num);
+// }
+// }
+//GAME RANDOMELY
+// create a game where you start any random number ask the user to keep guessing the game number until the user enters collect value
+// var gameNum =25;
+// var userNum =prompt("guess the  number:")
+// while(userNum !=gameNum){
+//     userNum = prompt("wrong guess!try again:")
+// }
+// alert("congratulion! you guess the correct number")
+//ESCAPE CHARACTER
+// \n do print \t do space
+//template literal 
+
+// //METHOD  to do work
+//string method in js built-in function
+//1)str.touppercase() ,2)str.tolowercase 3)str.trim to remove white space
+// console.log("shiekh\namber")
+// console.log("shiekh\tamber")
+// var name='shiekh amber jawed';
+// var newname=name.toUpperCase();//camel case
+// console.log(name);
+// console.log(newname);
+
+//  var name='shiekh amber jawed';
+//  var newname=name.toLowerCase();//camel case first small than after all capital
+//full_name snake  case,full-name kabab case,FullName pascal case 
+//  console.log(name);
+//  console.log(newname);
+//trim remove space start and end
+// var name="         shiekh amber jawed              ";
+// console.log(name.trim());
+//SLICE sSTRING //not work
+// var num="shiekh";
+// console.loge(num.slice(1, 3));
+//replace string
+// var name="shiekl";
+// console.log(name.replace("l","h"));
+// charAT string //notwork
+// var name="shiekh";
+// console.log(name.charAt(0));
+// var fullname=prompt("enter your fullname");
+
+// var username ="@"+fullname+fullname.length;
+// console.log(username);
+//ARRAY collection of item in linear
+// var marks=[95,87,65,77,45];
+// console.log(marks)
+// var makeup=["liplow","lipstick","haircolor","hairproduct","skinproduct"]  
+// //for loop array
+// // for(var idx=0; idx<makeup.length; idx++)
+// //     console.log(makeup[idx]);{
+// // }
+// //for of loop
+// for(var makeup)
+//     console.log(makeup);
+// test question
+//         let str = 'level';
+// if (str === str.split('').reverse().join('')) {
+//   console.log(`${str} is a palindrome`);
+// } else {
+//   console.log(`${str} is not a palindrome`);
+// }
+// // question2
+
+//       // 1. Print numbers from 1 to 10  and also sum of all number
+//      let num=[1,2,3,4,5,6,7,8,9,10]
+//      let sum = 0;
+//      for(let value of num){
+//       console.log(value)
+//      }
+//      for(let value of num){
+//       sum+=value
+//      }
+//      console.log(sum)
+// variable rules
+//  only aletter underscore or$ should be first character give example
+
+// public class VariableExample {
+//     public static void main(String[] args) {
+//         // Starting with a letter
+//         int age = 25;
+//         String name = "John";
+
+//         // Starting with underscore
+//         int _count = 10;
+//         double _price = 99.99;
+
+//         // Starting with dollar sign
+//         int $salary = 5000;
+//         String $currency = "USD";
+
+//         // Printing values
+//         System.out.println(age);
+//         System.out.println(name);
+//         System.out.println(_count);
+//         System.out.println(_price);
+//         System.out.println($salary);
+//         System.out.println($currency);
+//     }
+// }
+// reserved word cannot be varable name
+
+// public class TestReserved {
+//     public static void main(String[] args) {
+//         int class = 10;   // ❌ Error: "class" is a reserved word
+//         int public = 20;  // ❌ Error: "public" is a reserved word
+//         int if = 5;       // ❌ Error: "if" is a reserved word
+
+//         System.out.println(class);
+//     }
+// }
+ //create a function using the "function" keyword that take a string as an argument & return the number vowel in the string
+
+//  function countvowel(str){
+//     for(const char of str)
+//     console.log(char)
+//  }                                                             kj
+//  countvowel("aptechcenter" )
+//  function countvowel(str){
+//  let count =0
+//    for(const char of str){
+//    if (
+//     char === "a" ||
+//     char === "e"  ||
+//     char === "i"  ||
+//     char === "o"  ||
+//      char === "u"
+// )  {
+//    count++
+//  }
+// }
+// console.log(count)
+// }
+// countvowel("aptechcenter" )
+//object collection of vaues or keyvalues press ka colllection
+// two method 1 obj.key 2 obj["key"]
+// let student = {
+//     fullName:'amber jawed',
+//     age:18,
+//     cgpa:'18.3',
+//     ispass:true,
+// }
+// console.log(student)
+//Let block scope hota hy mean live bracket{} var is a global scope means everywhere declare
+// Ternary operator example
+// let age =16;
+// let age =25;
+// let result = age >= 18 ? "adult" :"not adult";
+// console.log(result);
+// message deposition notification docs mozilla
+// other condition
+/*switch (expr) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
+    break;
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
+    break;
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+//let var const keyword
+for loop stoping condition known
+console.log("Is there anything else you'd like?");*/
+// while loop when were stop  the condition check in start inlast not semi colon have
+// in Do-while loops when were stop the condition check in the last atleast run one time in last not semi colon have
+// for (let i=1; i<=5, i++) starting condition, stoping condition,updation
+//for of loops are use in string and arrays 
+//for in loops are use in object and arrays
+//template literal bactic
+/*For each loops array Kay  hr ek element Kay liye Kuch kaam krwana parhta hy
+
+Three parameter pass for each loops value idx and array itself
+
+For each loops array ki list ko pass krwata hy
+
+Or kaam krwata hy
+
+Higher order function/methed for each loops hof which takes other function parameter use or any function returns
+
+Where it is located callback called higher order function
+
+JSON is a lightweight data-interchange format, used to store and exchange data between a server and a client.
+
+Map method create new array filter method*/
+    </script>
+</body>
+</html>

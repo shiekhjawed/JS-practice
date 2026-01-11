@@ -1,0 +1,555 @@
+// console.log('This is external js ')
+// //variable var a=10
+
+// // int a=10
+// // string name='ahmed';
+// // boolean on=true;
+// // float b=10.5
+// // String
+// var name='Ahmed';
+// var name2='Ayan';
+// console.log(name)
+// document.write(name)
+// console.log(typeof(name2))
+// console.log()
+
+// // integer
+
+
+// var a=10;
+// var b=20;
+// console.log(a+b)
+// console.log(a-b)
+// console.log(typeof(a*b))
+// console.log(typeof(a/b))
+
+
+
+// var name='Ahmed Hassan';
+// var age=22;
+// var addrees='landhi karachi';
+
+// //console screen ka backend per print kaara deta hai
+// console.log(name);
+// console.log(age);
+// console.log(addrees)
+
+
+// // document.write(name);
+// // document.write(age);
+// // document.write(addrees)
+
+
+// // String concatination 
+
+
+// var fname='ahmed';
+// var lname='hassan';
+// var middelname=" ";
+// console.log(fname+middelname+lname)
+// console.log(fname.length)
+// console.log(middelname.length)
+// var num1=20;
+// var num=30;
+// console.log(num1+num)
+// var name=prompt('Enter you name....')
+// console.log(name)
+// var age=prompt('Enter the age ....')
+// console.log(age)
+// var add=prompt('Enter your addrees...')
+// console.log(add)
+var a=+prompt('Enter no a')
+var b=+prompt('Enter no b')
+console.log(a+b)
+console.log(a-b)
+console.log(a*b)
+console.log(a/b)
+
+
+
+// //camprasion operator
+// var a=20;
+// var b=40;
+
+// console.log(a==b)
+// console.log(a!=b)
+// console.log(a>b)
+// console.log(a<b)
+// console.log(a<=b)
+// //LOOP IN JS 
+// //for loop
+// //do while loop
+// // while loop
+// // foreach / forin loop
+
+
+
+// //for loop (jab humie start sa laker end tak condition pata hu yo for loop)
+// var i=0;
+// for(i=0; i<=10; i++)
+// {
+
+//    console.log("3"+"X"+i+"="+i*3)
+// }
+// //simple loop 1 20 
+// //even no 1 20 
+// //odd no 1 20 
+// // ksi bhi no ka  table user input
+// // 1 20 square
+// // 1 20 cube 
+// // while loop (kam sa kam  ek dafa execute hu aur last condition maloom hu )
+// // var i=0;
+// // while(i<20){
+// //      console.log(i**2)
+// //      i++
+// // }
+
+// //do while loop 
+
+// var i=0;
+// do{
+//     console.log(i)
+//     i++
+// }while(i<10)
+   //if else 
+// var starting_loop=+prompt('Enter the first no....: ');
+
+// var last_no=+prompt('Enter the last no.......');
+// for(var i=starting_loop; i<=last_no; i*=2){
+//     console.log(i)
+// }
+
+
+// var age=+prompt('Enter your age......');
+// if(age>=18){
+//  console.log('you are eligible for vote ....')
+// }
+// else{
+//     console.log('you are not eligible.....: ')
+// }
+// var per=+prompt('Enter your percentage......');
+// if(per>=90){
+//     console.log('Your Grade is A++')
+// }
+// else if(per>=80){
+//         console.log('Your Grade is A+')
+
+// }
+// else if(per>=70){
+//         console.log('Your Grade is A')
+
+// // }
+// // else if(per>=60){
+// //         console.log('Your Grade is b')
+
+// // }
+// // else{
+// //     console.log('oops you are failed better luck next time ')
+// // }
+// // bitwise opreator (and) (or)
+
+
+// // var username=prompt('Enter your user name ......')
+// // var pass=prompt('Enter your password.......')
+// // if(username=='ahmed'|| pass=='ahmed123'){
+// //     alert('Login suceessfully.....')
+// // }
+// // else{
+// //     alert('username and pass is incorrect....')
+// // }
+// document.write('We make a login form...')
+// var username=prompt('Enter your username you want to set...')
+// var pass=prompt('Enter your password you want to set...')
+// var name=username;
+// var password=pass;
+// var choice=prompt('Enter your choice if you want to sign..... yes or no')
+// if(choice=='yes'){
+//     if(name==username && password==pass){
+//         console.log('LOGin suceesfully')
+//     }
+//     else {
+//         console.log('invalid enter data ')
+//     }
+// }
+// else{
+//     console.log('Have a nice day.....')
+// }
+
+
+
+
+
+// 🔹 1. var
+
+// Function-scoped hota hai (sirf function ke andar limited hota hai, block {} se farq nahi padta).
+
+// Re-declare aur Re-assign dono kar sakte ho.
+
+// Hoisting hoti hai (upar le jata hai, lekin undefined assign hota hai).
+
+// 👉 Example:
+
+
+
+var a = "Ahmed";
+console.log(a); // Ahmed
+
+var a = "Hassan"; // Re-declare allowed
+console.log(a); // Hassan
+
+a = "Ali"; // Re-assign allowed
+console.log(a); // Ali
+
+// // 🔹 2. let
+
+// // Block-scoped hota hai (sirf {} block ke andar limited).
+
+// // Re-declare nahi kar sakte ho (same scope me).
+
+// // Re-assign kar sakte ho.
+
+// // Hoisting hoti hai lekin temporal dead zone ki wajah se use karne se error aata hai jab tak declare na ho.
+
+// // 👉 Example:
+
+
+
+let age = 20;
+console.log(age); // 20
+
+// let age = 30; ❌ Error (same scope me re-declare nahi kar sakte)
+age = 25; // Re-assign allowed
+console.log(age); // 25
+
+{
+  let city = "Karachi"; 
+  console.log(city); // Karachi
+}
+// console.log(city); ❌ Error (block ke bahar access nahi hoga)
+
+
+// // 🔹 3. const
+
+// // Block-scoped hota hai.
+
+// // Re-declare aur Re-assign dono nahi kar sakte.
+
+// // Declare karte waqt value deni zaroori hai.
+
+// // Lekin agar value ek object ya array hai to properties ko modify kar sakte ho.
+
+// // 👉 Example:
+
+
+// const country = "Pakistan";
+// console.log(country); // Pakistan
+
+// // country = "India"; ❌ Error (Re-assign not allowed)
+// // const country = "China"; ❌ Error (Re-declare not allowed)
+
+// // ------------------ ARRAY BASICS ------------------
+let fruits = ["Apple", "Banana", "Mango"];
+console.log("Original:", fruits); // ["Apple", "Banana", "Mango"]
+
+// // ------------------ ADD / REMOVE ------------------
+fruits.push("Orange"); 
+console.log(fruits); // ["Apple", "Banana", "Mango", "Orange"]
+
+ fruits.pop(); 
+ console.log("pop:", fruits); // ["Apple", "Banana", "Mango"]
+
+fruits.unshift("Grapes");
+console.log("unshift:", fruits); // ["Grapes", "Apple", "Banana", "Mango"]
+
+fruits.shift();
+console.log("shift:", fruits); // ["Apple", "Banana", "Mango"]
+
+// // ------------------ COMBINE / CONVERT ------------------
+let arr1 = ["A", "B"];
+let arr2 = ["C", "D"];
+// console.log(arr1+arr2)
+let combined = arr1.concat(arr2);
+console.log("concat:", combined); // ["A", "B", "C", "D"]
+
+console.log("join:", fruits.join(", ")); // "Apple, Banana, Mango"
+
+let sliced = fruits.slice(1, 3);
+console.log("slice:", sliced); // ["Banana", "Mango"]
+
+
+
+// // ------------------ SEARCH ------------------
+console.log("indexOf Banana:", fruits.indexOf("Banana")); 
+console.log("indexOf Orange:", fruits.indexOf("Orange"));
+console.log("includes Mango:", fruits.includes("Mango")); 
+
+// // ------------------ LOOP / TRANSFORM ------------------
+let fruit = ["Apple", "Banana", "Mango"];
+for(var i=0; i<fruit.length; i++){
+   console.log(fruit[i])
+}
+<!-- after -->
+var a = "Ahmed";
+console.log(a); // Ahmed
+
+var a = "Hassan"; // Re-declare allowed
+console.log(a); // Hassan
+
+a = "Ali"; // Re-assign allowed
+console.log(a); // Ali
+
+// // 🔹 2. let
+
+// // Block-scoped hota hai (sirf {} block ke andar limited).
+
+// // Re-declare nahi kar sakte ho (same scope me).
+
+// // Re-assign kar sakte ho.
+
+// // Hoisting hoti hai lekin temporal dead zone ki wajah se use karne se error aata hai jab tak declare na ho.
+
+// // 👉 Example:
+
+
+
+let age = 20;
+console.log(age); // 20
+
+// let age = 30; ❌ Error (same scope me re-declare nahi kar sakte)
+age = 25; // Re-assign allowed
+console.log(age); // 25
+
+{
+  let city = "Karachi"; 
+  console.log(city); // Karachi
+}
+// console.log(city); ❌ Error (block ke bahar access nahi hoga)
+
+
+// // 🔹 3. const
+
+// // Block-scoped hota hai.
+
+// // Re-declare aur Re-assign dono nahi kar sakte.
+
+// // Declare karte waqt value deni zaroori hai.
+
+// // Lekin agar value ek object ya array hai to properties ko modify kar sakte ho.
+
+// // 👉 Example:
+
+
+// const country = "Pakistan";
+// console.log(country); // Pakistan
+
+// // country = "India"; ❌ Error (Re-assign not allowed)
+// // const country = "China"; ❌ Error (Re-declare not allowed)
+
+// // ------------------ ARRAY BASICS ------------------
+let fruits = ["Apple", "Banana", "Mango"];
+console.log("Original:", fruits); // ["Apple", "Banana", "Mango"]
+
+// // ------------------ ADD / REMOVE ------------------
+fruits.push("Orange"); 
+console.log(fruits); // ["Apple", "Banana", "Mango", "Orange"]
+
+ fruits.pop(); 
+ console.log("pop:", fruits); // ["Apple", "Banana", "Mango"]
+
+fruits.unshift("Grapes");
+console.log("unshift:", fruits); // ["Grapes", "Apple", "Banana", "Mango"]
+
+fruits.shift();
+console.log("shift:", fruits); // ["Apple", "Banana", "Mango"]
+
+// // ------------------ COMBINE / CONVERT ------------------
+let arr1 = ["A", "B"];
+let arr2 = ["C", "D"];
+// console.log(arr1+arr2)
+let combined = arr1.concat(arr2);
+console.log("concat:", combined); // ["A", "B", "C", "D"]
+
+console.log("join:", fruits.join(", ")); // "Apple, Banana, Mango"
+
+let sliced = fruits.slice(1, 3);
+console.log("slice:", sliced); // ["Banana", "Mango"]
+
+
+
+// // ------------------ SEARCH ------------------
+console.log("indexOf Banana:", fruits.indexOf("Banana")); 
+console.log("indexOf Orange:", fruits.indexOf("Orange"));
+console.log("includes Mango:", fruits.includes("Mango")); 
+
+// // ------------------ LOOP / TRANSFORM ------------------
+let fruit = ["Apple", "Banana", "Mango"];
+for(var i=0; i<fruit.length; i++){
+   console.log(fruit[i])}
+   var a = "Ahmed";
+console.log(a); // Ahmed
+
+var a = "Hassan"; // Re-declare allowed
+console.log(a); // Hassan
+
+a = "Ali"; // Re-assign allowed
+console.log(a); // Ali
+
+// // 🔹 2. let
+
+// // Block-scoped hota hai (sirf {} block ke andar limited).
+
+// // Re-declare nahi kar sakte ho (same scope me).
+
+// // Re-assign kar sakte ho.
+
+// // Hoisting hoti hai lekin temporal dead zone ki wajah se use karne se error aata hai jab tak declare na ho.
+
+// // 👉 Example:
+
+
+
+let age = 20;
+console.log(age); // 20
+
+// let age = 30; ❌ Error (same scope me re-declare nahi kar sakte)
+age = 25; // Re-assign allowed
+console.log(age); // 25
+
+{
+  let city = "Karachi"; 
+  console.log(city); // Karachi
+}
+// console.log(city); ❌ Error (block ke bahar access nahi hoga)
+
+
+// // 🔹 3. const
+
+// // Block-scoped hota hai.
+
+// // Re-declare aur Re-assign dono nahi kar sakte.
+
+// // Declare karte waqt value deni zaroori hai.
+
+// // Lekin agar value ek object ya array hai to properties ko modify kar sakte ho.
+
+// // 👉 Example:
+
+
+// const country = "Pakistan";
+// console.log(country); // Pakistan
+
+// // country = "India"; ❌ Error (Re-assign not allowed)
+// // const country = "China"; ❌ Error (Re-declare not allowed)
+
+// // ------------------ ARRAY BASICS ------------------
+let fruits = ["Apple", "Banana", "Mango"];
+console.log("Original:", fruits); // ["Apple", "Banana", "Mango"]
+
+// // ------------------ ADD / REMOVE ------------------
+fruits.push("Orange"); 
+console.log(fruits); // ["Apple", "Banana", "Mango", "Orange"]
+
+ fruits.pop(); //last ko remove krdega
+ console.log("pop:", fruits); // ["Apple", "Banana", "Mango"]
+
+fruits.unshift("Grapes");
+console.log("unshift:", fruits); // ["Grapes", "Apple", "Banana", "Mango"]
+
+fruits.shift();
+console.log("shift:", fruits); // ["Apple", "Banana", "Mango"]
+
+// // ------------------ COMBINE / CONVERT ------------------
+let arr1 = ["A", "B"];
+let arr2 = ["C", "D"];
+// console.log(arr1+arr2)
+let combined = arr1.concat(arr2);
+console.log("concat:", combined); // ["A", "B", "C", "D"]
+
+console.log("join:", fruits.join(", ")); // "Apple, Banana, Mango"
+    
+let sliced = fruits.slice(1, 3);
+console.log("slice:", sliced); // ["Banana", "Mango"]
+
+
+
+// // ------------------ SEARCH ------------------
+console.log("indexOf Banana:", fruits.indexOf("Banana")); 
+console.log("indexOf Orange:", fruits.indexOf("Orange"));
+console.log("includes Mango:", fruits.includes("Mango")); 
+
+// // ------------------ LOOP / TRANSFORM ------------------
+let fruit = ["Apple", "Banana", "Mango"];
+for(var i=0; i<fruit.length; i++){
+   console.log(fruit[i])
+}
+//   function hellow(){
+//       console.log('This is function in js ')
+//   }
+// hellow()
+// hellow()
+
+<script>
+    <!-- function hellow(){
+        console.log('this function in js')
+    }
+    hellow()
+    hellow()
+    
+function greet(name){
+     console.log('Hellow sir '+name)
+ }
+ user=prompt('Enter you good name >>>>')
+ greet(user)
+function add(a,b){
+    console.log('The sum of 2 no is ',a+b)
+}
+add(8,6);
+
+add(8,4);
+function mins(a,b){
+    console.log('The minus of 2 no is ',a-b)
+}
+mins(3,5);
+function product(a,b){
+    console.log('The product of 2 no is ',a*b)
+}
+let p=product(3,4)
+console.log(p)
+
+function sum(a,b){
+    return a+b;
+}
+let a=sum(2,3) -->
+console.log(a)
+</script>
+// Addition
+function sum(a, b) {
+    return a + b;
+}
+
+// Subtraction
+function subtract(a, b) {
+    return a - b;
+}
+
+// Multiplication
+function multiply(a, b) {
+    return a * b;
+}
+
+// Square Root
+  let sqr=8**2;
+        //  console.log(sqr);
+
+
+
+
+}
+
+// Test the functions
+console.log("7 + 9 =", sum(7, 9));          // 16
+console.log("9 - 7 =", subtract(9, 7));     // 2
+console.log("7 × 9 =", multiply(7, 9));     // 63
+console.log("√9 =", squareRoot(9));         // 3 --
+let result = 8 / 2;
+console.log(result); // 4

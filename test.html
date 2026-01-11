@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript calculator</title>
+</head>
+<body>
+    <h1>simple calculator</h1>
+    
+        <form action="">
+            <input type="number" id="no_1" placeholder="enter a number 1..."><br><br>
+            <input type="number" id="no_2" placeholder="enter a number a 2....."><br><br>
+            <input type="text" id="output" disable> <br><br>
+            <button onclick="sum(event)">sum</button>
+            </form>
+            <script>
+        function sum(event){
+            event.preventDefault();
+            let output=document.getElementById("output");
+            let a=parseInt(document.getElementById("no_1").value);
+             let b=parseInt(document.getElementById("no_1").value);
+             let c=a+b;
+             output.value=c;
+             alert(c);
+        }
+        
+
+         
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+

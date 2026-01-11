@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      padding: 30px;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #333;
+    }
+    .output {
+      background: #fff;
+      border: 2px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+    <!-- ⚡ Quick Summary
+Concept	Description	Example
+Object	Collection of key-value pairs	{ name: "John", age: 30 }
+Class	Blueprint for creating objects	class Person { ... }
+Constructor	Special method for initializing	constructor(name, age) { ... }
+Inheritance	Create child class from parent	class Student extends Person
+this	Refers to current object	this.name -->
+<!-- 🌍 English + Urdu Explanation
+Concept	English Explanation	Urdu Explanation
+Object	A collection of data and functions.	Object aik aisi cheez hoti hai jisme data (properties or variable) aur functions (methods) hote hain.
+Class	A blueprint to create objects with same structure and behavior.	Class aik naqsha (blueprint) hota hai jisse hum milte-julte objects bana sakte hain.
+Constructor	A special method that runs when a new object is created.	Constructor aik khaas function hota hai jo naya object banate waqt automatic chal jata hai.
+Inheritance	A way for one class to get features from another class.	Inheritance ka matlab hai aik class doosri class ke features (properties aur methods) use kar sakti hai.
+this	Refers to the current object that called the method. “this” us object ko refer karta hai jis ne method call kiya hai. -->
+<!-- // ==========================
+// 🏗️ CLASS (BLUEPRINT)
+// ==========================
+class Person {
+  // 👇 Constructor (Special method that runs automatically when object is created)
+  constructor(name, age) {
+    this.name = name; // 'this' refers to the current object (yeh current object ko refer karta hai)
+    this.age = age;
+  }
+
+  // 👇 Method (function inside a class)
+  introduce() {
+    console.log(`Hi, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+}
+
+// ==========================
+// 👨‍🎓 INHERITANCE (Child class)
+// ==========================
+class Student extends Person {
+  constructor(name, age, grade) {
+    // 'super' calls the parent (Person) class constructor
+    super(name, age);
+    this.grade = grade;
+  }
+
+  // 👇 New method only for Student
+  study() {
+    console.log(`${this.name} is studying and got grade ${this.grade}.`);
+  }
+}
+
+// ==========================
+// 🧱 OBJECTS (Created from the class)
+// ==========================
+const person1 = new Person("Ali", 25);
+const student1 = new Student("Sara", 20, "A");
+
+// ==========================
+// 🚀 USING METHODS
+// ==========================
+person1.introduce();  // Output: Hi, my name is Ali and I am 25 years old.
+student1.introduce(); // Output: Hi, my name is Sara and I am 20 years old.
+student1.study();     // Output: Sara is studying and got grade A. -->
+
+      <h2>JavaScript Class Example (Object, Class, Constructor, Inheritance, this)</h2>
+  <p><strong>Output:</strong></p>
+  <div class="output" id="output"></div>
+
+  <script>
+    // ==========================
+    // 🏗️ CLASS (BLUEPRINT)
+    // ==========================
+    class Person {
+      // 👇 Constructor (runs when object is created)
+      constructor(name, age) {
+        this.name = name; // 'this' refers to the current object (yeh current object ko refer karta hai)
+        this.age = age;
+      }
+
+      // 👇 Method (function inside a class)
+      introduce() {
+        return `Hi, my name is ${this.name} and I am ${this.age} years old.`;
+      }
+    }
+
+    // ==========================
+    // 👨‍🎓 INHERITANCE (Child class)
+    // ==========================
+    class Student extends Person {
+      constructor(name, age, grade) {
+        // 'super' calls the parent (Person) class constructor
+        super(name, age);
+        this.grade = grade;
+      }
+
+      // 👇 New method only for Student
+      study() {
+        return `${this.name} is studying and got grade ${this.grade}.`;
+      }
+    }
+
+    // ==========================
+    // 🧱 OBJECTS (Created from the class)
+    // ==========================
+    const person1 = new Person("Ali", 25);
+    const student1 = new Student("Sara", 20, "A");
+
+    // ==========================
+    // 🚀 DISPLAYING OUTPUT ON WEBPAGE
+    // ==========================
+    const outputDiv = document.getElementById("output");
+    outputDiv.innerHTML = `
+      ${person1.introduce()} <br>
+      ${student1.introduce()} <br>
+      ${student1.study()}
+    `;
+  </script>
+</body>
+</html>
+</body>
+</html>

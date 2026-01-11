@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="dom.css">
+ <!-- <script src="apna.js"></script>give null is aspecial primitive type in js its doing blank object dom element not access -->
+<body>
+    <!-- dom manipulaation element ko access krtay hn -->
+
+     <!-- attribute additional information class="trend"  class attribute trend value -->
+      <!-- append at the end of node prepend at the start of node before the node dom manipulaation -->
+       | Node Type                                                  | Description                                  | Example                                     |
+| ---------------------------------------------------------- | -------------------------------------------- | ------------------------------------------- |
+| **Element Node**                                           | Represents an HTML tag                       | `<div>`, `<p>`, `<h1>`                      |
+| **Text Node**                                              | Represents text inside an element            | `"Hello world"` inside `<p>Hello world</p>` |
+| **Comment Node**                                           | Represents an HTML comment                   | `<!-- This is a comment -->`                |
+| **Document Node**                                          | The root of the DOM tree                     | The entire HTML document                    |
+| **Attribute Node** *(deprecated as separate node in DOM4)* | Represents an attribute of an element        | `id="title"` in `<h1 id="title">`           |
+| **DocumentType Node**                                      | Represents the `<!DOCTYPE html>` declaration | `<!DOCTYPE html>`                           |
+
+     <!-- dom manipulation element access way dom advantages dynamic changes in aweb pages 
+      <div>javascript</div>
+    <h2 class="heading">welcome to my portal</h2>
+    <h1 class="heading">this is my first dom page</h1>
+    <h4 class="heading">so that i can achieve success with this</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit distinctio veritatis aspernatur officia illo quis saepe est, a magnam, quidem dolore enim quia ipsum quam. Quibusdam eveniet distinctio labore reiciendis!</p>
+    <p>this is a second paragraph</p>
+    <button id="btn">Click me!</button> -->
+<!-- dom properties -->
+<!-- inner text return the text context of the element and all its children
+  <div>
+        <h3>friuts</h3>
+        <ul>
+            <li>mango</li>
+            <li>banana</li>
+            <li>lichey</li>
+        </ul>
+    </div> -->
+    <!-- inner html return the plain text -->
+    <!-- <div>
+        <h3><i>friuts</i></h3>
+        <ul>
+            <li>mango</li>
+            <li>banana</li>
+            <li>lichey</li>
+        </ul>
+    </div> -->
+    <!-- textcontent:return textual content even for hidden element -->
+       <!-- <div>
+        <h3 style="visibility:hidden;">friuts</h3>
+        <ul>
+            <li>mango</li>
+            <li>banana</li>
+            <li>lichey</li>
+        </ul>
+    </div>  -->
+    <!-- <h2>welcome </h2> -->
+     <!-- question no2 create 3 divs with common classname -"box" acess them and some unique text each of them -->
+<!-- <div class="box">salaar </div>
+<div class="box">ziyan</div>
+
+<div class="box">ashar</div>
+<div class="box">ashar</div>
+<div class="box">ashar</div>
+<div class="box">ashar</div>
+<div class="box">ashar</div>
+<div class="box">ashar</div> -->
+<div id="box">this is a box
+
+</div>
+<img src="../picture/bootstrap.jpg" alt="" srcset="">
+
+<script src="dom.js"></script>
+</body>
+</html>

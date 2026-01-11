@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height:200px;
+        width:200px;
+        background-color: aqua;
+        color:purple;
+        border:2px solid black;
+        text-transform:capitalize;
+        margin-top:50px;
+    }
+</style>
+ <!-- <body>
+    <script>
+    <!-- The change in the state of an object is called an event; when it is performed, it is called event handling -->
+  <!-- <button id="btn1">clickme</button>
+    <button ondblclick="console.log('button was clicked')">click me 2 times</button> -->
+   <!-- after perfom called event handling -->
+    <!-- this is inline event handling  first method-->
+     <!-- js handling run first priritythen inline -->
+    <!-- <div onmouseover ="console.log('you are on inside div')">welcome to my portal</div>
+    <button class="myBtn">click</button> --> 
+    <body style="font-family: Arial; text-align: center; margin-top: 50px;">
+
+  <h2>🔹 Ways to Handle Events in JavaScript</h2>
+<!-- 
+    /* 1 Inline Event Handler/* -->
+  <button onclick="alert('Button clicked using Inline Event!')">
+    Inline Event Button
+  </button>
+ 
+
+
+  <!-- 2️⃣ DOM Property Method -->
+  <button id="btn2">DOM Property Button</button>
+  <br><br>
+
+
+  <!-- 3️⃣ Event Listener Method -->
+  <button id="btn3">Event Listener Button</button>
+
+  <script>
+    // 2️⃣ DOM Property Method
+    const btn2 = document.getElementById("btn2");
+    btn2.onclick = function() {
+      alert("Button clicked using DOM Property Method!");
+    };
+   
+
+    // 3️⃣ Event Listener Method
+    const btn3 = document.getElementById("btn3");
+    btn3.addEventListener("click", function() {
+      alert("Button clicked using Event Listener Method!");
+    });
+ 
+    </script>
+    <script src="event.js"></script>
+</body>
+</html>
