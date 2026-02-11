@@ -198,11 +198,109 @@ console.log("Sum of Even Numbers: " + sumEven);
 console.log("Sum of Odd Numbers: " + sumOdd);
 
      console.log(sum)
+        //class Assignment question miss manaheel jameel
 
+//1.write a function that displays the current date and time in the console.
+function date() {
+    var now = new Date();
+    console.log(now);
 
+}
+date();
+//end of answer
+//2.write a function that takes a name first name and last as an argument and displays a greeting message in the console.
+function greet(firstName, lastName) {
+    console.log("Hello, " + firstName + " " + lastName + "!");
+    console.log(`Hello, ${firstName} ${lastName}!`);//another ways to write
+
+}
+greet("shiekh", "Amber");
+//end of answer
+
+//3.write a function that takes a number as an argument and returns the square of that number.
+function square(num) {
+    return num * num;
+}
+console.log(square(5));
+//end of anwer
+//4.write a function that  make a simple calculator take input fromuser enter two numbers and an operator (+, -, *, /)  
+// and  console show  and also prompt show the result of the calculation.
+function calculator() {
+    var num1 = parseFloat(prompt("Enter first number:"));
+    var num2 = parseFloat(prompt("Enter second number:"));
+    var operator = prompt("Enter operator (+, -, *, /):");
+
+    var result;
+
+    if (operator === "+") {
+        result = num1 + num2;
+    }
+    else if (operator === "-") {
+        result = num1 - num2;
+    }
+    else if (operator === "*") {
+        result = num1 * num2;
+    }
+    else if (operator === "/") {
+        if (num2 === 0) {
+            alert("Cannot divide by zero");
+            console.log("Cannot divide by zero");
+            return;
+        }
+        result = num1 / num2;
+    }
+    else {
+        alert("Invalid operator");
+        console.log("Invalid operator");
+        return;
+    }
+
+    alert("Result: " + result);
+    console.log("Result: " + result);
+}
+
+// Call the function
+calculator();
+//end of anwer
+//5.write a function that squares of its argument
+function square(num) {
+    return num * num;
+}
+square(5);
+console.log(square(5));
+//end of anwer
+//6.write a funtion that computes the factorial of a number
+function factorial(n) {
+    var result = 1;
+    for (var i = 1; i <= n; i++) {
+        result *= i;
+    }
+    return result;
+}
+console.log(factorial(4));
+//end of anwer
+//write a function that takes start and end number as input and display counting in your browser
+function counting(start, end) {
+    for (var i = start; i <= end; i++) {    
+        console.log(i);
+    }
+}
+counting(1, 10);
+//end of anwer
+
+//7.write a function that takes base and perpendicular as input and calculate the hypotenuse of a right angle triangle.
+// h^2=b^2+p^2
+function calculateHypotenuse(base, perpendicular) {
+    var hypotenuse = Math.sqrt((base*base) + (perpendicular * perpendicular));
+    return hypotenuse;
+}
+// Call the function
+console.log(calculateHypotenuse(3, 4)); //output 5  
+//end of anwer
 
     </script>
     
 </body>
 </html>
+
 
